@@ -83,7 +83,7 @@ function notifyServedOrder(order) {
         },
       ])
       .then(function() {
-        window.alert('Order served! A message is sent to your chat as well!');
+        window.alert('Order served! Check details in your chat');
       })
       .catch(function(error) {
         window.alert('Error sending message: ' + error);
