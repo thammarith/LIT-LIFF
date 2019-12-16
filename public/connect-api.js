@@ -43,7 +43,9 @@ function order(prd_id) {
   axios
     .post(`${apiUrl}/orders/${prd_id}`)
     .then(res => addToWaiting(res.data._id))
-    .catch(err => console.err(err));
+    .then(() =>         window.alert('Order was made')
+    )
+    .catch(err => window.alert(`There was a problem sending your order (${JSON.stringify(err)})`));
 }
 
 function addToWaiting(prd_id) {
