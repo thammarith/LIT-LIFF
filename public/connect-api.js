@@ -11,7 +11,8 @@ function loadProducts() {
     .get(`${apiUrl}/products`)
     .then(res => (products = res.data))
     .then(updateProductList)
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
+    .finally(() => setTimeout(loadProducts, 10000));
 }
 
 function updateProductList() {
