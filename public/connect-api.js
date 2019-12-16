@@ -17,6 +17,8 @@ function loadProducts() {
 
 function updateProductList() {
   const productContainer = document.getElementById('product-container');
+  document.getElementsByClassName('product-card').forEach(card => card.remove());
+
   for (const product of products) {
     const card = document.createElement('div');
     card.classList.add('product-card');
