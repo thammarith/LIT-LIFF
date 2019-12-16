@@ -8,16 +8,47 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #product-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      height: 56vw;
+      margin-top: 2rem;
+      width: 42vw;
+    }
+
+    .product-card-prd-name {
+      color: #745247;
+      margin: 0;
+      margin-top: auto;
+    }
+
+    .product-card-button {
+      color: #0a0;
+      font-size: 1.5rem;
+      margin: 1rem 0 2rem;
+    }
+
+    .product-card-button:hover {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
-    ทดสอบบบบ
-    <div id="product-container">
-      <div class="product-card" v-for="product of products" :key="product._id" @click="sendMessage(product)">
-        {{ product }}
-      </div>
-    </div>
+    <div id="product-container"></div>
   </div>
 
 
