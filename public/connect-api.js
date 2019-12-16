@@ -64,7 +64,7 @@ function keepCheckingForServed() {
       }
     })
     .catch(err => console.err(err))
-    .finally(() => setTimeout(keepCheckingForServed, 5000));
+    .finally(() => setTimeout(keepCheckingForServed, 3000));
 }
 
 function notifyServedOrder(order) {
@@ -77,11 +77,11 @@ function notifyServedOrder(order) {
       .sendMessages([
         {
           type: 'text',
-          text: `Order for ${product.prd_name} is served at ${order.ord_served_at}`,
+          text: `Order for "${product.prd_name}" was served at ${order.ord_served_at}`,
         },
       ])
       .then(function() {
-        window.alert('Message sent');
+        window.alert('Order served! A message is sent to your chat as well!');
       })
       .catch(function(error) {
         window.alert('Error sending message: ' + error);
