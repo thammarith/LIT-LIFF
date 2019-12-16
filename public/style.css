@@ -15,6 +15,8 @@ html {
 
 .product-card {
   align-items: center;
+  background-position: 50% 50%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 56vw;
