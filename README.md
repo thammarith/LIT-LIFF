@@ -23,6 +23,8 @@ git clone https://github.com/thammarith/LIT-LIFF.git
 npm install
 ```
 
+5. Change the `apiUrl` in `LIT-LIFF/public/connect-api.js` to `https://{NAME_OF_THE_APP}.herokuapp.com` that you got from installing [`LIT-api`](https://github.com/thammarith/LIT-api)
+
 ### Link your local repository to Heroku
 
 1. Log in to Heroku from the command line.
